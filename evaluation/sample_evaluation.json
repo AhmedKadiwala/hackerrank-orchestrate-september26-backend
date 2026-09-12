@@ -1,0 +1,517 @@
+{
+  "samples": 25,
+  "amount_mae": "316795.8968",
+  "amount_exact_within_1": 4,
+  "status_accuracy": 1.0,
+  "method_accuracy": 1.0,
+  "payment_plan_exact": 0.92,
+  "earliest_date_accuracy": 0.76,
+  "spending_changes_exact": 0.92,
+  "overall_categorical_accuracy": 0.92,
+  "mismatches": [
+    {
+      "request_id": "request_02",
+      "predicted": {
+        "request_id": "request_02",
+        "amount_safe_to_pay": "19030778.93",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "installments",
+        "payment_plan": "2025-08-08:15952906.67|2025-09-07:15952906.67|2025-10-07:15952906.67",
+        "earliest_date_for_full_payment": "2025-08-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Use 3 installments of IDR 15,952,906.67, starting 8 August 2025. This leaves at least IDR 29,158,400 available."
+      },
+      "actual": {
+        "request_id": "request_02",
+        "amount_safe_to_pay": "17229139.2",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "installments",
+        "payment_plan": "2025-08-08:15952906.67|2025-09-07:15952906.67|2025-10-07:15952906.67",
+        "earliest_date_for_full_payment": "2025-09-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Use 3 installments of IDR 15,952,906.67, starting 8 August 2025. This leaves at least IDR 29,158,400 available."
+      },
+      "amount_abs_error": "1801639.73"
+    },
+    {
+      "request_id": "request_03",
+      "predicted": {
+        "request_id": "request_03",
+        "amount_safe_to_pay": "1072660.94",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2019-11-15:5491000",
+        "earliest_date_for_full_payment": "2019-11-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay IDR 5,491,000 in full on 15 November 2019. Paying earlier would take the balance below the IDR 2,668,700 minimum."
+      },
+      "actual": {
+        "request_id": "request_03",
+        "amount_safe_to_pay": "873000",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2019-11-15:5491000",
+        "earliest_date_for_full_payment": "2019-11-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay IDR 5,491,000 in full on 15 November 2019. Paying earlier would take the balance below the IDR 2,668,700 minimum."
+      },
+      "amount_abs_error": "199660.94"
+    },
+    {
+      "request_id": "request_04",
+      "predicted": {
+        "request_id": "request_04",
+        "amount_safe_to_pay": "12333797.76",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2024-06-15:12693000",
+        "earliest_date_for_full_payment": "2024-06-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay IDR 12,693,000 in full on 15 June 2024. Paying earlier would take the balance below the IDR 30,686,600 minimum."
+      },
+      "actual": {
+        "request_id": "request_04",
+        "amount_safe_to_pay": "8401800",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2024-06-15:12693000",
+        "earliest_date_for_full_payment": "2024-06-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Wait until 15 June 2024, then pay IDR 12,693,000 in full. Paying sooner would put the IDR 30,686,600 minimum at risk."
+      },
+      "amount_abs_error": "3931997.76"
+    },
+    {
+      "request_id": "request_05",
+      "predicted": {
+        "request_id": "request_05",
+        "amount_safe_to_pay": "0",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not make this payment by 12 January 2026. None of the available options keeps the ZAR 13,100 minimum protected."
+      },
+      "actual": {
+        "request_id": "request_05",
+        "amount_safe_to_pay": "737",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not make this payment by 12 January 2026. None of the available options keeps the ZAR 13,100 minimum protected."
+      },
+      "amount_abs_error": "737"
+    },
+    {
+      "request_id": "request_06",
+      "predicted": {
+        "request_id": "request_06",
+        "amount_safe_to_pay": "620.39",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "full_payment",
+        "payment_plan": "2026-01-03:620.40",
+        "earliest_date_for_full_payment": "2026-01-03",
+        "spending_changes_needed": "stop:event_476",
+        "decision_explanation": "Stop family streaming plan, then pay EUR 620.40 today. This keeps the EUR 800 minimum protected."
+      },
+      "actual": {
+        "request_id": "request_06",
+        "amount_safe_to_pay": "603.3",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "full_payment",
+        "payment_plan": "2026-01-03:620.40",
+        "earliest_date_for_full_payment": "2026-01-15",
+        "spending_changes_needed": "stop:event_476",
+        "decision_explanation": "Stop the family streaming plan, then pay EUR 620.40 today. This leaves at least EUR 800 available."
+      },
+      "amount_abs_error": "17.09"
+    },
+    {
+      "request_id": "request_07",
+      "predicted": {
+        "request_id": "request_07",
+        "amount_safe_to_pay": "101903.15",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "installments",
+        "payment_plan": "2024-09-12:68432|2024-10-10:68432|2024-11-07:68432",
+        "earliest_date_for_full_payment": "2024-10-23",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Use 3 installments of INR 68,432, starting 12 September 2024. This leaves at least INR 93,000 available."
+      },
+      "actual": {
+        "request_id": "request_07",
+        "amount_safe_to_pay": "87170.56",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "installments",
+        "payment_plan": "2024-09-12:68432|2024-10-10:68432|2024-11-07:68432",
+        "earliest_date_for_full_payment": "2024-10-23",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Use 3 installments of INR 68,432, starting 12 September 2024. This leaves at least INR 93,000 available."
+      },
+      "amount_abs_error": "14732.59"
+    },
+    {
+      "request_id": "request_08",
+      "predicted": {
+        "request_id": "request_08",
+        "amount_safe_to_pay": "373.01",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2025-04-15:996.60",
+        "earliest_date_for_full_payment": "2025-04-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay EUR 996.60 in full on 15 April 2025. Paying earlier would take the balance below the EUR 800 minimum."
+      },
+      "actual": {
+        "request_id": "request_08",
+        "amount_safe_to_pay": "284.57",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2025-04-15:996.60",
+        "earliest_date_for_full_payment": "2025-04-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay EUR 996.60 in full on 15 April 2025. Paying earlier would take the balance below the EUR 800 minimum."
+      },
+      "amount_abs_error": "88.44"
+    },
+    {
+      "request_id": "request_10",
+      "predicted": {
+        "request_id": "request_10",
+        "amount_safe_to_pay": "199356.64",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not proceed with the INR 266,700 request. Although INR 199,356.64 is available today, the full amount cannot be completed safely within 90 days."
+      },
+      "actual": {
+        "request_id": "request_10",
+        "amount_safe_to_pay": "12700",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not make this payment by 10 February 2025. None of the available options keeps the INR 225,400 minimum protected."
+      },
+      "amount_abs_error": "186656.64"
+    },
+    {
+      "request_id": "request_11",
+      "predicted": {
+        "request_id": "request_11",
+        "amount_safe_to_pay": "13109999.99",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "full_payment",
+        "payment_plan": "2025-05-03:13110000",
+        "earliest_date_for_full_payment": "2025-05-03",
+        "spending_changes_needed": "reduce_to:event_948:755250",
+        "decision_explanation": "Reduce games and recreation to idr 755,250, then pay IDR 13,110,000 today. This keeps the IDR 34,140,600 minimum protected."
+      },
+      "actual": {
+        "request_id": "request_11",
+        "amount_safe_to_pay": "12510645",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "full_payment",
+        "payment_plan": "2025-05-03:13110000",
+        "earliest_date_for_full_payment": "2025-07-15",
+        "spending_changes_needed": "reduce_to:event_989:665950",
+        "decision_explanation": "Reduce the weekend food delivery to IDR 665,950, then pay IDR 13,110,000 today. This leaves at least IDR 34,140,600 available."
+      },
+      "amount_abs_error": "599354.99"
+    },
+    {
+      "request_id": "request_13",
+      "predicted": {
+        "request_id": "request_13",
+        "amount_safe_to_pay": "828.97",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2024-05-15:941.60",
+        "earliest_date_for_full_payment": "2024-05-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay EUR 941.60 in full on 15 May 2024. Paying earlier would take the balance below the EUR 1,300 minimum."
+      },
+      "actual": {
+        "request_id": "request_13",
+        "amount_safe_to_pay": "433.4",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2024-05-15:941.60",
+        "earliest_date_for_full_payment": "2024-05-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay EUR 941.60 in full on 15 May 2024. Paying earlier would take the balance below the EUR 1,300 minimum."
+      },
+      "amount_abs_error": "395.57"
+    },
+    {
+      "request_id": "request_14",
+      "predicted": {
+        "request_id": "request_14",
+        "amount_safe_to_pay": "656.42",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not proceed with the EUR 5,414.20 request. Although EUR 656.42 is available today, the full amount cannot be completed safely within 90 days."
+      },
+      "actual": {
+        "request_id": "request_14",
+        "amount_safe_to_pay": "597.74",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not proceed with the EUR 5,414.20 request. Although EUR 597.74 is available today, the full amount cannot be completed safely within 90 days."
+      },
+      "amount_abs_error": "58.68"
+    },
+    {
+      "request_id": "request_15",
+      "predicted": {
+        "request_id": "request_15",
+        "amount_safe_to_pay": "110.04",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not proceed with the EUR 3,685 request. Although EUR 110.04 is available today, the full amount cannot be completed safely within 90 days."
+      },
+      "actual": {
+        "request_id": "request_15",
+        "amount_safe_to_pay": "83.05",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not make this payment by 1 February 2026. None of the available options keeps the EUR 1,200 minimum protected."
+      },
+      "amount_abs_error": "26.99"
+    },
+    {
+      "request_id": "request_17",
+      "predicted": {
+        "request_id": "request_17",
+        "amount_safe_to_pay": "242140.55",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "installments",
+        "payment_plan": "2026-03-01:95194.67|2026-03-31:95194.67|2026-04-30:95194.67",
+        "earliest_date_for_full_payment": "2026-04-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Use 3 installments of INR 95,194.67, starting 1 March 2026. This leaves at least INR 166,100 available."
+      },
+      "actual": {
+        "request_id": "request_17",
+        "amount_safe_to_pay": "243849.58",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "installments",
+        "payment_plan": "2026-03-01:95194.67|2026-03-31:95194.67|2026-04-30:95194.67",
+        "earliest_date_for_full_payment": "2026-03-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Use 3 installments of INR 95,194.67, starting 1 March 2026. This leaves at least INR 166,100 available."
+      },
+      "amount_abs_error": "1709.03"
+    },
+    {
+      "request_id": "request_18",
+      "predicted": {
+        "request_id": "request_18",
+        "amount_safe_to_pay": "554.1",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2026-08-15:3246.10",
+        "earliest_date_for_full_payment": "2026-08-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay EUR 3,246.10 in full on 15 August 2026. Paying earlier would take the balance below the EUR 1,400 minimum."
+      },
+      "actual": {
+        "request_id": "request_18",
+        "amount_safe_to_pay": "462",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2026-09-15:3246.10",
+        "earliest_date_for_full_payment": "2026-09-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay EUR 3,246.10 in full on 15 September 2026. Paying earlier would take the balance below the EUR 1,400 minimum."
+      },
+      "amount_abs_error": "92.1"
+    },
+    {
+      "request_id": "request_19",
+      "predicted": {
+        "request_id": "request_19",
+        "amount_safe_to_pay": "32746.86",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "partial_payment",
+        "payment_plan": "2024-09-04:32746.86|2024-09-15:6913.14",
+        "earliest_date_for_full_payment": "2024-09-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay INR 32,746.86 today and the remaining INR 6,913.14 on 15 September 2024. This completes the full request and keeps the INR 92,800 minimum protected."
+      },
+      "actual": {
+        "request_id": "request_19",
+        "amount_safe_to_pay": "28820",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "partial_payment",
+        "payment_plan": "2024-09-04:28820|2024-09-15:10840",
+        "earliest_date_for_full_payment": "2024-09-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay INR 28,820 today and the remaining INR 10,840 on 15 September 2024. This completes the full request and keeps the INR 92,800 minimum protected."
+      },
+      "amount_abs_error": "3926.86"
+    },
+    {
+      "request_id": "request_20",
+      "predicted": {
+        "request_id": "request_20",
+        "amount_safe_to_pay": "15065.02",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not proceed with the INR 303,700 request. Although INR 15,065.02 is available today, the full amount cannot be completed safely within 90 days."
+      },
+      "actual": {
+        "request_id": "request_20",
+        "amount_safe_to_pay": "5400",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not make this payment by 22 February 2026. None of the available options keeps the INR 64,500 minimum protected."
+      },
+      "amount_abs_error": "9665.02"
+    },
+    {
+      "request_id": "request_21",
+      "predicted": {
+        "request_id": "request_21",
+        "amount_safe_to_pay": "1574.39",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "full_payment",
+        "payment_plan": "2026-04-03:1574.40",
+        "earliest_date_for_full_payment": "2026-04-03",
+        "spending_changes_needed": "reduce_to:event_1817:49.6",
+        "decision_explanation": "Reduce monthly shopping spend to usd 49.60, then pay USD 1,574.40 today. This keeps the USD 1,800 minimum protected."
+      },
+      "actual": {
+        "request_id": "request_21",
+        "amount_safe_to_pay": "1543.35",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "full_payment",
+        "payment_plan": "2026-04-03:1574.40",
+        "earliest_date_for_full_payment": "2026-04-15",
+        "spending_changes_needed": "stop:event_1815|reduce_to:event_1816:23.50",
+        "decision_explanation": "Stop the online backup subscription and reduce the streaming subscription to USD 23.50, then pay USD 1,574.40 today. This leaves at least USD 1,800 available."
+      },
+      "amount_abs_error": "31.04"
+    },
+    {
+      "request_id": "request_22",
+      "predicted": {
+        "request_id": "request_22",
+        "amount_safe_to_pay": "478.47",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "installments",
+        "payment_plan": "2024-12-08:253.59|2025-01-05:253.59|2025-02-02:253.59",
+        "earliest_date_for_full_payment": "2025-01-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Use 3 installments of EUR 253.59, starting 8 December 2024. This leaves at least EUR 500 available."
+      },
+      "actual": {
+        "request_id": "request_22",
+        "amount_safe_to_pay": "475.46",
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "installments",
+        "payment_plan": "2024-12-08:253.59|2025-01-05:253.59|2025-02-02:253.59",
+        "earliest_date_for_full_payment": "2025-01-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Use 3 installments of EUR 253.59, starting 8 December 2024. This leaves at least EUR 500 available."
+      },
+      "amount_abs_error": "3.01"
+    },
+    {
+      "request_id": "request_23",
+      "predicted": {
+        "request_id": "request_23",
+        "amount_safe_to_pay": "8453.64",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2025-07-15:38016",
+        "earliest_date_for_full_payment": "2025-07-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay ZAR 38,016 in full on 15 July 2025. Paying earlier would take the balance below the ZAR 27,000 minimum."
+      },
+      "actual": {
+        "request_id": "request_23",
+        "amount_safe_to_pay": "9152",
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2025-07-15:38016",
+        "earliest_date_for_full_payment": "2025-07-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay ZAR 38,016 in full on 15 July 2025. Paying earlier would take the balance below the ZAR 27,000 minimum."
+      },
+      "amount_abs_error": "698.36"
+    },
+    {
+      "request_id": "request_24",
+      "predicted": {
+        "request_id": "request_24",
+        "amount_safe_to_pay": "17501.03",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not proceed with the INR 109,600 request. Although INR 17,501.03 is available today, the full amount cannot be completed safely within 90 days."
+      },
+      "actual": {
+        "request_id": "request_24",
+        "amount_safe_to_pay": "13420",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not proceed with the INR 109,600 request. Although INR 13,420 is available today, the full amount cannot be completed safely within 90 days."
+      },
+      "amount_abs_error": "4081.03"
+    },
+    {
+      "request_id": "request_25",
+      "predicted": {
+        "request_id": "request_25",
+        "amount_safe_to_pay": "2589324.51",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not proceed with the IDR 60,496,000 request. Although IDR 2,589,324.51 is available today, the full amount cannot be completed safely within 90 days."
+      },
+      "actual": {
+        "request_id": "request_25",
+        "amount_safe_to_pay": "1425000",
+        "affordability_status": "not_affordable",
+        "recommended_payment_method": "not_recommended",
+        "payment_plan": "none",
+        "earliest_date_for_full_payment": "",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Do not make this payment by 17 April 2024. None of the available options keeps the IDR 23,379,100 minimum protected."
+      },
+      "amount_abs_error": "1164324.51"
+    }
+  ]
+}
