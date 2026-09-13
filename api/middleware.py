@@ -12,7 +12,7 @@ class CorsMiddleware:
             origin.strip()
             for origin in os.getenv("BACKEND_CORS_ORIGINS", "").split(",")
             if origin.strip()
-        }
+        } or {"http://localhost:5173", "http://127.0.0.1:5173"}
 
     def __call__(self, request):
         origin = request.headers.get("Origin")
