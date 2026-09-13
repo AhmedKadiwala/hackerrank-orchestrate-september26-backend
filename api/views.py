@@ -5,6 +5,7 @@ import json
 from django.http import HttpRequest, HttpResponseNotAllowed, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
+from api.models import FinancialProfile, PurchaseRequest
 from buy_or_wait.engine import FinancialEngine
 from buy_or_wait.loaders import Dataset, repo_root_from_code
 
@@ -26,7 +27,15 @@ def response_for(row: dict) -> dict:
 def health(request: HttpRequest):
     if request.method != "GET":
         return HttpResponseNotAllowed(["GET"])
-    return JsonResponse({"ok": True, "requests": len(ds.requests)})
+    db_counts = {}
+    try:
+        db_counts = {
+            "financial_profiles": FinancialProfile.objects.count(),
+            "purchase_requests": PurchaseRequest.objects.count(),
+        }
+    except Exception:
+        db_counts = {"available": False}
+    return JsonResponse({"ok": True, "requests": len(ds.requests), "db": db_counts})
 
 
 def list_requests(request: HttpRequest):

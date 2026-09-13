@@ -32,6 +32,8 @@ BACKEND_CORS_ORIGINS=
 ## Run API
 
 ```bash
+python manage.py migrate
+python manage.py import_dataset
 python manage.py runserver
 ```
 
@@ -46,7 +48,7 @@ curl http://localhost:8000/api/health
 Use these settings:
 
 - Build command: `pip install -r requirements.txt`
-- Start command: `gunicorn buy_or_wait_api.wsgi:application --bind 0.0.0.0:$PORT`
+- Start command: `python manage.py migrate --noinput && python manage.py import_dataset && gunicorn buy_or_wait_api.wsgi:application --bind 0.0.0.0:$PORT`
 - Health check path: `/api/health`
 
 Set these Render environment variables:
@@ -66,4 +68,24 @@ python tests\test_engine.py
 python evaluation\evaluate_samples.py
 python main.py
 python manage.py check
+```
+
+## Database Tables
+
+The Django app creates these tables:
+
+- `financial_profiles`
+- `financial_events`
+- `purchase_requests`
+- `payment_options`
+- `messages`
+- `evidence_images`
+- `exchange_rates`
+- `recommendations`
+
+Load the bundled challenge CSVs into the database with:
+
+```bash
+python manage.py migrate
+python manage.py import_dataset
 ```

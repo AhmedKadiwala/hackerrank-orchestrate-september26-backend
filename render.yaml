@@ -3,7 +3,7 @@ services:
     name: hackerrank-orchestrate-september26-backend
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn buy_or_wait_api.wsgi:application --bind 0.0.0.0:$PORT
+    startCommand: python manage.py migrate --noinput && python manage.py import_dataset && gunicorn buy_or_wait_api.wsgi:application --bind 0.0.0.0:$PORT
     healthCheckPath: /api/health
     envVars:
       - key: DJANGO_SECRET_KEY
